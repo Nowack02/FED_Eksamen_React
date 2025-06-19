@@ -1,0 +1,161 @@
+/* src/pages/ExamSession.module.css */
+
+.sessionContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.examCard {
+  background-color: var(--card-background);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px var(--shadow-color);
+  text-align: center;
+}
+
+.studentInfo {
+  margin-bottom: 1.5rem;
+}
+
+.studentInfo h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.25rem;
+}
+
+.studentInfo p {
+  color: var(--text-color-light);
+  font-size: 1.1rem;
+}
+
+.actionArea {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+.drawnQuestion {
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #e8eaf6;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Styling til Timer-komponenten */
+.timer {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    letter-spacing: 2px;
+}
+.lowTime {
+    color: var(--error-color);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.notesTextarea {
+  width: 100%;
+  padding: 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  resize: vertical;
+  margin-bottom: 1.5rem;
+}
+
+.gradingSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.gradingSection label {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.gradingSection select {
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  margin-left: 0.5rem;
+}
+
+/* Knap-styling */
+.button {
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.primaryButton {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.primaryButton:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.successButton {
+    background-color: var(--success-color);
+    color: #fff;
+}
+.successButton:hover {
+    filter: brightness(110%);
+}
+
+.dangerButton {
+    background-color: var(--error-color);
+    color: #fff;
+}
+.dangerButton:hover {
+    filter: brightness(110%);
+}
+
+.finalMessage {
+    padding: 2rem;
+    text-align: center;
+}
+
+.actionsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.secondaryButton {
+    background-color: #e9ecef;
+    color: var(--text-color);
+}
+.secondaryButton:hover {
+    background-color: #dee2e6;
+}

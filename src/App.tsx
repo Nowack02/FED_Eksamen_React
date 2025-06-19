@@ -1,44 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.tsx
+
+import { Routes, Route, Link, NavLink } from 'react-router-dom';
+import Home from './pages/Home';
+import CreateExam from './pages/CreateExam';
+import AddStudents from './pages/AddStudents';
+import ExamSession from './pages/ExamSession';
+import HistoryList from './pages/HistoryList';
+import HistoryDetail from './pages/HistoryDetail';
+import './App.css'; 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-        <a href="https://fredagsbarometer.dk" target="_blank">
-          <img src={"https://fredagsbarometer.dk/assets/logo-small-b5abe37c.svg"} className="logo react" alt="Fredagsbarlogo logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      {/* Button for Awesome Site by Creator: fredagsbarometer.dk */}
-      <div className="card">
-        <a href="https://fredagsbarometer.dk" target="_blank">
-          <button>Visit fredagsbarometer.dk</button>
-        </a>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <nav className="main-nav">
+        <Link to="/" className="nav-brand">
+          Eksaminationsapp
+        </Link>
+        <div className="nav-links">
+          <NavLink to="/">Hjem</NavLink>
+          <NavLink to="/create-exam">Opret Ny Eksamen</NavLink>
+          <NavLink to="/history">Se Historik</NavLink>
+        </div>
+      </nav>
+
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/create-exam" element={<CreateExam />} />
+          <Route path="/exam/:examId/add-students" element={<AddStudents />} />
+          <Route path="/exam/:examId/session" element={<ExamSession />} />
+          
+          {/* DENNE LINJE SKAL RETTES: Den skal pege på element={<HistoryList />} */}
+          <Route path="/history" element={<HistoryList />} />
+
+          <Route path="/history/:examId" element={<HistoryDetail />} />
+          <Route path="*" element={<h2>Siden blev ikke fundet (404)</h2>} />
+        </Routes>
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,80 @@
+/* src/components/ExamForm.module.css */
+
+.form {
+  background-color: var(--card-background);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Mellemrum mellem form-grupperne */
+}
+
+.gridRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 4 kolonner med lige stor bredde */
+  gap: 1.5rem; /* Mellemrum mellem kolonnerne */
+}
+
+/* Og til 1 kolonne på helt små skærme */
+@media (max-width: 500px) {
+  .gridRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.formGroup input {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  width: 100%; /* Sørger for at input-feltet fylder sin grid-celle */
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.25); /* Giver en pæn "glow" effekt */
+}
+
+/* Genbruger knap-styles for konsistens */
+.button {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid var(--border-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+  font-size: 1rem;
+  margin-top: 1rem; /* Lidt ekstra plads øverst */
+}
+
+.button:hover:not(:disabled) {
+  background-color: var(--primary-color-hover);
+  border-color: var(--primary-color-hover);
+}
+
+.button:disabled {
+  background-color: #a0a0a0;
+  border-color: #a0a0a0;
+  cursor: not-allowed;
+}

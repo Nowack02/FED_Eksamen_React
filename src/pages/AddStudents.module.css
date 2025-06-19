@@ -1,0 +1,123 @@
+/* src/pages/AddStudents.module.css */
+
+.pageHeader {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.pageHeader h2 {
+  color: var(--text-color);
+}
+
+.pageHeader p {
+  color: var(--text-color-light);
+  font-size: 1.1rem;
+}
+
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* To lige store kolonner */
+  gap: 2rem;
+  align-items: start; /* Sørger for at toppen af elementerne er på linje */
+}
+
+/* Gør layoutet til én kolonne på mindre skærme */
+@media (max-width: 800px) {
+  .contentWrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.studentListContainer {
+  background-color: var(--card-background);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.studentList {
+  list-style-type: decimal; /* Viser tal foran hvert punkt */
+  padding-left: 1.5rem; /* Giver plads til tallene */
+}
+
+.studentList li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.studentList li:last-child {
+  border-bottom: none;
+}
+
+.studentList li {
+  padding: 0.75rem 0.25rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between; /* Skubber knappen til højre */
+  align-items: center;
+  gap: 1rem;
+}
+
+.removeButton {
+  border: 1px solid var(--error-color);
+  background-color: transparent;
+  color: var(--error-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.removeButton:hover {
+  background-color: var(--error-color);
+  color: #fff;
+}
+
+.actions {
+    text-align: center;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.actionButton {
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: var(--success-color); /* Bruger succes-farven fra vores globale styles */
+  color: #fff;
+}
+
+.actionButton:hover {
+    filter: brightness(110%);
+}
+
+.dangerButton {
+  /* Genbruger styling fra .actionButton, men med andre farver */
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: var(--error-color);
+  color: #fff;
+}
+
+.dangerButton:hover {
+    filter: brightness(110%);
+}

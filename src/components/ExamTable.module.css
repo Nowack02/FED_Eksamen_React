@@ -1,0 +1,60 @@
+.tableContainer {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    overflow: hidden;
+}
+
+.examTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.examTable th, .examTable td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.examTable thead th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.examTable tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.examTable tbody tr:hover {
+    background-color: #f1f3f5;
+}
+
+.courseLink {
+    font-weight: 600;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.courseLink:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.completedBadge {
+  margin-left: 0.75rem;
+  background-color: var(--success-color);
+  color: #fff;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 12px;
+  vertical-align: middle;
+}
+
+.actionsCell {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 0.5rem;
+}

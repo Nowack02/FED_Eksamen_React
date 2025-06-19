@@ -1,0 +1,156 @@
+{
+  "exams": [
+    {
+      "id": "8510",
+      "examtermin": "Forår 2024",
+      "courseName": "PRJ3",
+      "date": "2024-06-12",
+      "numberOfQuestions": 10,
+      "examDurationMinutes": 60,
+      "startTime": "12:00",
+      "isCompleted": true
+    },
+    {
+      "id": "be00",
+      "examtermin": "Forår 2025",
+      "courseName": "SWT",
+      "date": "2025-06-17",
+      "numberOfQuestions": 8,
+      "examDurationMinutes": 12,
+      "startTime": "11:20",
+      "isCompleted": true
+    },
+    {
+      "id": "59d6",
+      "examtermin": "asdas",
+      "courseName": "asdasda",
+      "date": "3532-04-23",
+      "numberOfQuestions": 10,
+      "examDurationMinutes": 20,
+      "startTime": "09:00",
+      "isCompleted": true
+    }
+  ],
+  "students": [
+    {
+      "id": "e222",
+      "name": "Simon Nowack",
+      "studentNo": "202308256",
+      "examId": "8510",
+      "questionNo": 3,
+      "notes": "ergdsfgdg",
+      "grade": "7",
+      "actualExamTimeMinutes": 0
+    },
+    {
+      "id": "871d",
+      "name": "Dumme Thomas",
+      "studentNo": "213523523",
+      "examId": "8510",
+      "questionNo": 10,
+      "notes": "asdadqw",
+      "grade": "00",
+      "actualExamTimeMinutes": 0
+    },
+    {
+      "id": "13a3",
+      "name": "Skaldepande",
+      "studentNo": "4574564",
+      "examId": "8510",
+      "questionNo": 3,
+      "notes": "Blev fkn sur og drak sin monner",
+      "grade": "12",
+      "actualExamTimeMinutes": 0
+    },
+    {
+      "id": "3a30",
+      "name": "Simon Nowack",
+      "studentNo": "202308256",
+      "examId": "be00",
+      "questionNo": 1,
+      "notes": "JA TJAAAAAK",
+      "grade": "12",
+      "actualExamTimeMinutes": 0
+    },
+    {
+      "id": "2c8c",
+      "name": "Dolan",
+      "studentNo": "123125",
+      "examId": "be00",
+      "questionNo": 2,
+      "notes": "What?",
+      "grade": "12",
+      "actualExamTimeMinutes": 0
+    },
+    {
+      "id": "5ebe",
+      "name": "Lasse",
+      "studentNo": "325235",
+      "examId": "be00",
+      "questionNo": 7,
+      "notes": "feat gemini",
+      "grade": "12",
+      "actualExamTimeMinutes": 0
+    },
+    {
+      "id": "f7ee",
+      "name": "Rene",
+      "studentNo": "23326236",
+      "examId": "be00",
+      "questionNo": 3,
+      "notes": "wompi",
+      "grade": "10",
+      "actualExamTimeMinutes": 0
+    },
+    {
+      "id": "7b02",
+      "name": "Victoria",
+      "studentNo": "345235423",
+      "examId": "be00",
+      "questionNo": 6,
+      "notes": "dependency tree...",
+      "grade": "7",
+      "actualExamTimeMinutes": 0
+    },
+    {
+      "id": "5c88",
+      "name": "Thea",
+      "studentNo": "34623523",
+      "examId": "be00",
+      "questionNo": 7,
+      "notes": "Okay????",
+      "grade": "10",
+      "actualExamTimeMinutes": 0
+    },
+    {
+      "id": "a577",
+      "name": "Fast",
+      "studentNo": "21341245",
+      "examId": "be00",
+      "questionNo": 1,
+      "notes": "EVA AHAHAHAHAHA",
+      "grade": "7",
+      "actualExamTimeMinutes": 0
+    },
+    {
+      "id": "c5b1",
+      "name": "asdsdafs",
+      "studentNo": "dsfsdfsd",
+      "examId": "59d6",
+      "questionNo": 8,
+      "notes": "drffgsdfg",
+      "grade": "7",
+      "actualExamTimeMinutes": 0
+    },
+    {
+      "id": "2baf",
+      "name": "sdfsdfsdf",
+      "studentNo": "sdfsdfsdfsd",
+      "examId": "59d6",
+      "questionNo": 8,
+      "notes": "sdqweqw",
+      "grade": "7",
+      "actualExamTimeMinutes": 0
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+/* src/pages/HistoryDetail.module.css */
+
+.pageHeader {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.pageSubheader {
+  color: var(--text-color-light);
+  margin-bottom: 2rem;
+}
+
+.summaryCard {
+  color: var(--primary-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.summaryCard h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.resultsTable {
+  width: 100%;
+  border-collapse: collapse; /* Fjerner mellemrum mellem celler */
+  margin-bottom: 2rem;
+  background-color: var(--card-background);
+  box-shadow: 0 4px 6px var(--shadow-color);
+  border-radius: 8px;
+  overflow: hidden; /* Sørger for at border-radius virker på tabellen */
+}
+
+.resultsTable th, .resultsTable td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.resultsTable thead th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: var(--text-color);
+  text-align: center;;
+}
+
+.resultsTable tbody td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.resultsTable tbody tr:nth-child(even) {
+  background-color: #f8f9fa; /* Zebra-striber for bedre læsbarhed */
+}
+
+.resultsTable tbody tr:hover {
+  background-color: #e8eaf6;
+}
+
+.backLink {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+  color: var(--primary-color-hover);
+}

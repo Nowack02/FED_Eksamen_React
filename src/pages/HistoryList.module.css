@@ -1,0 +1,106 @@
+/* src/pages/HistoryList.module.css */
+
+.pageHeader {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.examGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Gør at linket fylder hele kortet */
+}
+
+.examCard {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  position: relative;
+}
+
+.examCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.examCard h3 {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.examCard p {
+  color: var(--text-color-light);
+  margin: 0;
+}
+.completedBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--success-color);
+  color: #fff;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 12px;
+}
+
+.cardActions {
+  margin-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* En generel basis-knap, som alle andre knapper bygger ovenpå */
+.button {
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border: 1px solid transparent; /* Giver en pæn kant */
+    transition: all 0.2s ease-in-out;
+}
+
+/* Grå knap til sekundære handlinger som "Se Detaljer" */
+.buttonSecondary {
+    background-color: #e9ecef; /* En lys grå farve */
+    border-color: #ced4da;
+    color: var(--text-color);
+}
+
+.buttonSecondary:hover {
+    background-color: #dee2e6;
+    border-color: #adb5bd;
+}
+
+/* Rød knap til farlige handlinger som "Slet" */
+.removeButton, .dangerButton {
+    background-color: var(--error-color);
+    border-color: var(--error-color);
+    color: #fff;
+}
+
+.removeButton:hover, .dangerButton:hover {
+    filter: brightness(110%);
+}
+
+.buttonSmall {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.9rem;
+}
