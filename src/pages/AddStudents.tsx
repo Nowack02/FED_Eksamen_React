@@ -5,10 +5,10 @@ import { getExamById, getStudentsByExamId, addStudentToExam, removeStudent, remo
 import { StudentForm } from '../components/StudentForm';
 import styles from './AddStudents.module.css';
 import { formatDate } from '../utils/formatDate';
+import { useExamActions } from '../hooks/useExamActions';
 
 export default function AddStudents() {
   const { examId } = useParams<{ examId: string }>();
-  const navigate = useNavigate();
   const [exam, setExam] = useState<Exam | null>(null);
   const [students, setStudents] = useState<Student[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -40,6 +40,8 @@ export default function AddStudents() {
     fetchData();
   }, [examId]);
 
+  const { deleteExam } = useExamActions();
+
   const handleAddStudent = async (name: string, studentNo: string) => {
     if (!examId) return;
     setIsSaving(true);
@@ -51,21 +53,6 @@ export default function AddStudents() {
         alert("Der skete en fejl ved tilføjelse.");
     } finally {
         setIsSaving(false);
-    }
-  };
-
-  const handleRemoveExam = async () => {
-    if (!exam) return;
-    if (!window.confirm('Er du sikker på, at du vil slette denne eksamen?'))
-      return;
-
-     try {
-      await removeExam(exam.id);
-      alert('Eksamen er slettet.');
-      navigate('/'); // Send brugeren tilbage til forsiden
-    } catch (err) {
-      console.error("Fejl ved sletning af eksamen", err);
-      alert("Der skete en fejl under sletningen.");
     }
   };   
 
@@ -122,7 +109,7 @@ export default function AddStudents() {
         <Link to={`/exam/${exam.id}/session`} className={styles.actionButton}>
           Start Eksamen
         </Link>
-        <button onClick={handleRemoveExam} className={styles.dangerButton}>
+        <button onClick={() => deleteExam(exam.id)} className={styles.dangerButton}>
           Slet Eksamen
         </button>
       </div>

@@ -1,14 +1,4 @@
 {
-  "exams": [
-    {
-      "id": "d210",
-      "examtermin": "sdfsdfsd",
-      "courseName": "sdfsdfsd",
-      "date": "275760-02-23",
-      "numberOfQuestions": 10,
-      "examDurationMinutes": 20,
-      "startTime": "09:00"
-    }
-  ],
+  "exams": [],
   "students": []
 }
