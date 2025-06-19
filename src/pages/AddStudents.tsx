@@ -6,6 +6,7 @@ import { Exam, Student } from '../types';
 import { getExamById, getStudentsByExamId, addStudentToExam, removeStudent, removeExam} from '../api/api'; // Tilføj removeStudent
 import { StudentForm } from '../components/StudentForm';
 import styles from './AddStudents.module.css';
+import { formatDate } from '../utils/formatDate';
 
 export default function AddStudents() {
   const { examId } = useParams<{ examId: string }>();
@@ -99,7 +100,7 @@ export default function AddStudents() {
     <div>
       <div className={styles.pageHeader}>
         <h2>Tilføj Studerende til: {exam.courseName}</h2>
-        <p>{exam.examtermin} - afholdes den {new Date(exam.date).toLocaleDateString('da-DK')}</p>
+        <p>{exam.examtermin} - afholdes den {formatDate(exam.date)}</p>
       </div>
       
       <div className={styles.contentWrapper}>
@@ -129,7 +130,7 @@ export default function AddStudents() {
       
       <div className={styles.actions}>
         <Link to={`/exam/${exam.id}/session`} className={styles.actionButton}>
-          Gå til Eksamen
+          Start Eksamen
         </Link>
         <button onClick={handleRemoveExam} className={styles.dangerButton}>
           Slet Eksamen
