@@ -1,5 +1,3 @@
-/* src/pages/HistoryDetail.module.css */
-
 .pageHeader {
   margin-bottom: 2rem;
   border-bottom: 1px solid var(--border-color);
@@ -26,12 +24,12 @@
 
 .resultsTable {
   width: 100%;
-  border-collapse: collapse; /* Fjerner mellemrum mellem celler */
+  border-collapse: collapse;
   margin-bottom: 2rem;
   background-color: var(--card-background);
   box-shadow: 0 4px 6px var(--shadow-color);
   border-radius: 8px;
-  overflow: hidden; /* Sørger for at border-radius virker på tabellen */
+  overflow: hidden;
 }
 
 .resultsTable th, .resultsTable td {
@@ -52,7 +50,7 @@
 }
 
 .resultsTable tbody tr:nth-child(even) {
-  background-color: #f8f9fa; /* Zebra-striber for bedre læsbarhed */
+  background-color: #f8f9fa;
 }
 
 .resultsTable tbody tr:hover {

@@ -1,9 +1,7 @@
-// src/pages/AddStudents.tsx
-
 import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Exam, Student } from '../types';
-import { getExamById, getStudentsByExamId, addStudentToExam, removeStudent, removeExam} from '../api/api'; // Tilføj removeStudent
+import { getExamById, getStudentsByExamId, addStudentToExam, removeStudent, removeExam} from '../api/api';
 import { StudentForm } from '../components/StudentForm';
 import styles from './AddStudents.module.css';
 import { formatDate } from '../utils/formatDate';
@@ -18,7 +16,6 @@ export default function AddStudents() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Din eksisterende useEffect-logik er uændret
     if (!examId) {
       setError("Intet eksamens-ID fundet i URL'en.");
       setIsLoading(false);
@@ -44,7 +41,6 @@ export default function AddStudents() {
   }, [examId]);
 
   const handleAddStudent = async (name: string, studentNo: string) => {
-    // ... uændret ...
     if (!examId) return;
     setIsSaving(true);
     try {
@@ -60,7 +56,6 @@ export default function AddStudents() {
 
   const handleRemoveExam = async () => {
     if (!exam) return;
-    // God UX: Spørg altid om bekræftelse ved sletning
     if (!window.confirm('Er du sikker på, at du vil slette denne eksamen?'))
       return;
 
@@ -74,17 +69,13 @@ export default function AddStudents() {
     }
   };   
 
-  // NY FUNKTION til at fjerne en studerende
   const handleRemoveStudent = async (studentId: string) => {
-    // God UX: Spørg altid om bekræftelse ved sletning
     if (!window.confirm('Er du sikker på, at du vil fjerne denne studerende?')) {
       return;
     }
 
     try {
       await removeStudent(studentId);
-      // Opdater UI'et ved at fjerne den studerende fra vores lokale state
-      // Dette er hurtigere end at gen-hente hele listen fra serveren
       setStudents(prevStudents => prevStudents.filter(s => s.id !== studentId));
     } catch (err) {
       console.error("Fejl ved sletning af studerende", err);
@@ -112,7 +103,6 @@ export default function AddStudents() {
           <h3>Tilmeldte Studerende ({students.length})</h3>
           {students.length > 0 ? (
             <ol className={styles.studentList}>
-              {/* Opdateret liste til at inkludere en "Fjern"-knap */}
               {students.map(s => (
                 <li key={s.id}>
                   <span>{s.name} ({s.studentNo})</span>

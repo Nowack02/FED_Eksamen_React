@@ -1,8 +1,5 @@
-// src/components/ExamForm.tsx
-
 import React, { useState } from 'react';
 import { Exam } from '../types';
-// 1. Importer CSS modulet
 import styles from './ExamForm.module.css';
 
 interface ExamFormProps {
@@ -11,7 +8,6 @@ interface ExamFormProps {
 }
 
 export const ExamForm: React.FC<ExamFormProps> = ({ onSave, isSaving }) => {
-    // ... din useState og handleChange logik er uændret ...
     const [formData, setFormData] = useState({
         examtermin: '',
         courseName: '',
@@ -36,7 +32,6 @@ export const ExamForm: React.FC<ExamFormProps> = ({ onSave, isSaving }) => {
 
     return (
         <form onSubmit={handleSubmit} className={styles.form}>
-            {/* Disse to felter forbliver i fuld bredde */}
             <div className={styles.formGroup}>
                 <label htmlFor="examtermin">Eksamenstermin:</label>
                 <input id="examtermin" type="text" name="examtermin" value={formData.examtermin} onChange={handleChange} required disabled={isSaving}/>
@@ -47,7 +42,6 @@ export const ExamForm: React.FC<ExamFormProps> = ({ onSave, isSaving }) => {
                 <input id="courseName" type="text" name="courseName" value={formData.courseName} onChange={handleChange} required disabled={isSaving}/>
             </div>
 
-            {/* NY GRUPPERING: En 'div' til at holde de fire felter */}
             <div className={styles.gridRow}>
                 <div className={styles.formGroup}>
                     <label htmlFor="date">Dato:</label>

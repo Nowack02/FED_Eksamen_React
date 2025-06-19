@@ -1,7 +1,4 @@
-// src/components/StudentForm.tsx
-
 import React, { useState } from 'react';
-// 1. Importer CSS Modulet
 import styles from './StudentForm.module.css';
 
 interface StudentFormProps {
@@ -25,7 +22,6 @@ export const StudentForm: React.FC<StudentFormProps> = ({ onSave, isSaving }) =>
     };
 
     return (
-        // 2. Anvend klasserne
         <form onSubmit={handleSubmit} className={styles.form}>
             <h3>Tilføj Studerende</h3>
             <div className={styles.formGroup}>

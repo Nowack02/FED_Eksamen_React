@@ -1,15 +1,12 @@
-// src/pages/CreateExam.tsx
-
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ExamForm } from '../components/ExamForm';
 import { saveExam } from '../api/api';
 import { Exam } from '../types';
 
-// Tilføj en simpel wrapper-klasse for layout
 const pageStyles = {
   maxWidth: '600px',
-  margin: '0 auto', // Centrerer  
+  margin: '0 auto', 
 };
 
 export default function CreateExam() {

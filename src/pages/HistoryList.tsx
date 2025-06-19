@@ -1,10 +1,8 @@
-// src/pages/HistoryList.tsx
-
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Exam } from '../types';
 import { getExams, removeExam } from '../api/api';
-import { ExamTable } from '../components/ExamTable'; // Vi genbruger vores smarte tabel-komponent
+import { ExamTable } from '../components/ExamTable';
 import styles from './HistoryList.module.css';
 
 export default function HistoryList() {
@@ -16,7 +14,6 @@ export default function HistoryList() {
     const fetchExams = async () => {
       try {
         const allExams = await getExams();
-        // 1. Her sikrer vi, at KUN afsluttede eksamener vises
         const completedExams = allExams.filter(exam => exam.isCompleted === true);
         setExams(completedExams);
       } catch (err) {

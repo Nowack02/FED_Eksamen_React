@@ -20,7 +20,7 @@ export default function HistoryDetail() {
     }
 
     const fetchData = async () => {
-      setIsLoading(true); // Sæt loading, når vi begynder at hente
+      setIsLoading(true);
       try {
         const [examData, studentsData] = await Promise.all([
           getExamById(examId),
@@ -28,8 +28,7 @@ export default function HistoryDetail() {
         ]);
         setExam(examData);
         setStudents(studentsData);
-      } catch (err: any) { // Brug 'any' for at kunne tilgå .message
-        // GIV EN MERE SPECIFIK FEJLMEDDELELSE
+      } catch (err: any) { 
         console.error("Detaljeret fejl:", err);
         setError(`Kunne ikke hente detaljer. Fejl: ${err.message}`);
       } finally {

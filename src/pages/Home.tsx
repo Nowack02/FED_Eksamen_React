@@ -1,11 +1,9 @@
-// src/pages/Home.tsx
-
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Exam } from '../types';
 import { getExams } from '../api/api';
-import { ExamTable } from '../components/ExamTable'; // Importer den nye komponent
-import styles from './Home.module.css'; // Vi kan genbruge noget af sidens styling
+import { ExamTable } from '../components/ExamTable';
+import styles from './Home.module.css';
 
 export default function Home() {
   const [exams, setExams] = useState<Exam[]>([]);

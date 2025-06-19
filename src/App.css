@@ -1,9 +1,7 @@
-/* src/App.css */
-
 .main-nav {
   display: flex;
-  align-items: center; /* Centrerer vertikalt */
-  gap: 1.5rem;      /* Mellemrum mellem brand og nav-links */
+  align-items: center;
+  gap: 1.5rem; 
   padding: 1rem 2rem;
   background-color: var(--card-background);
   border-bottom: 1px solid var(--border-color);
@@ -15,7 +13,7 @@
   font-weight: 700;
   color: var(--text-color);
   text-decoration: none;
-  margin-right: auto; /* Denne magiske linje skubber alt andet til højre */
+  margin-right: auto;
 }
 
 .nav-links {

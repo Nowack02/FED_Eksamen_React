@@ -82,15 +82,12 @@ export default function ExamSession() {
             actualExamTimeMinutes: Math.round(timeSpent / 60)
         };
 
-        // Opdater den studerende i databasen
         await updateStudent(currentStudent.id, updatedData);
 
         // Tjek om der er flere studerende
         if (currentStudentIndex < students.length - 1) {
-            // Gå til næste studerende
             setCurrentStudentIndex(prev => prev + 1);
             
-            // Nulstil state for den nye eksamination
             setPhase('readyToDraw');
             setDrawnQuestion(null);
             setNotes('');
@@ -102,14 +99,6 @@ export default function ExamSession() {
             setPhase('examCompleted');
         }
     };
-  
-    // ----- DEBUGGING CONSOLE LOGS -----
-    // Indsæt disse linjer for at se, hvad state er lige før rendering
-    console.log('--- Rendering ExamSession ---');
-    console.log('Phase:', phase);
-    console.log('Exam:', exam);
-    console.log('Current Student:', currentStudent);
-    // ------------------------------------
 
     if (phase === 'loading') return <p>Indlæser session...</p>;
     if (phase === 'error') {
@@ -122,7 +111,6 @@ export default function ExamSession() {
       );
     }
         if (phase === 'examCompleted') {
-        // Sikkerhedstjek for at sikre at vi har eksamens-ID'et
         if (!exam) return <p>Eksamen er afsluttet.</p>;
 
         return (
@@ -143,8 +131,6 @@ export default function ExamSession() {
         );
     }
 
-    // Dette er det mest kritiske sikkerhedsnet. Hvis vi er forbi 'loading' og 'error',
-    // men stadig mangler data, fanger vi det her, før det crasher render-koden.
     if (!exam || !currentStudent) {
       console.error("Render-blokering: Forsøgte at rendere uden fuld data, selvom fasen ikke var 'loading' eller 'error'.");
       return <p>Venter på data...</p>;

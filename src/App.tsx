@@ -30,7 +30,6 @@ function App() {
           <Route path="/exam/:examId/add-students" element={<AddStudents />} />
           <Route path="/exam/:examId/session" element={<ExamSession />} />
           
-          {/* DENNE LINJE SKAL RETTES: Den skal pege på element={<HistoryList />} */}
           <Route path="/history" element={<HistoryList />} />
 
           <Route path="/history/:examId" element={<HistoryDetail />} />

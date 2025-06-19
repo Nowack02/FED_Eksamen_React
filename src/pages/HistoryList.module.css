@@ -1,5 +1,3 @@
-/* src/pages/HistoryList.module.css */
-
 .pageHeader {
   margin-bottom: 2rem;
   border-bottom: 1px solid var(--border-color);
@@ -15,7 +13,7 @@
 .cardLink {
   text-decoration: none;
   color: inherit;
-  display: block; /* Gør at linket fylder hele kortet */
+  display: block;
 }
 
 .examCard {
@@ -63,7 +61,6 @@
   justify-content: flex-end;
 }
 
-/* En generel basis-knap, som alle andre knapper bygger ovenpå */
 .button {
     text-align: center;
     display: inline-block;
@@ -73,13 +70,12 @@
     cursor: pointer;
     font-weight: 500;
     font-size: 0.9rem;
-    border: 1px solid transparent; /* Giver en pæn kant */
+    border: 1px solid transparent;
     transition: all 0.2s ease-in-out;
 }
 
-/* Grå knap til sekundære handlinger som "Se Detaljer" */
 .buttonSecondary {
-    background-color: #e9ecef; /* En lys grå farve */
+    background-color: #e9ecef;
     border-color: #ced4da;
     color: var(--text-color);
 }
@@ -89,7 +85,6 @@
     border-color: #adb5bd;
 }
 
-/* Rød knap til farlige handlinger som "Slet" */
 .removeButton, .dangerButton {
     background-color: var(--error-color);
     border-color: var(--error-color);

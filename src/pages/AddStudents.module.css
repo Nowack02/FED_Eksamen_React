@@ -1,5 +1,3 @@
-/* src/pages/AddStudents.module.css */
-
 .pageHeader {
   margin-bottom: 2rem;
   border-bottom: 1px solid var(--border-color);
@@ -17,12 +15,11 @@
 
 .contentWrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* To lige store kolonner */
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  align-items: start; /* Sørger for at toppen af elementerne er på linje */
+  align-items: start;
 }
 
-/* Gør layoutet til én kolonne på mindre skærme */
 @media (max-width: 800px) {
   .contentWrapper {
     grid-template-columns: 1fr;
@@ -37,8 +34,8 @@
 }
 
 .studentList {
-  list-style-type: decimal; /* Viser tal foran hvert punkt */
-  padding-left: 1.5rem; /* Giver plads til tallene */
+  list-style-type: decimal;
+  padding-left: 1.5rem;
 }
 
 .studentList li {
@@ -54,7 +51,7 @@
   padding: 0.75rem 0.25rem;
   border-bottom: 1px solid var(--border-color);
   display: flex;
-  justify-content: space-between; /* Skubber knappen til højre */
+  justify-content: space-between;
   align-items: center;
   gap: 1rem;
 }
@@ -94,7 +91,7 @@
   text-align: center;
   transition: background-color 0.2s ease-in-out;
   cursor: pointer;
-  background-color: var(--success-color); /* Bruger succes-farven fra vores globale styles */
+  background-color: var(--success-color);
   color: #fff;
 }
 
@@ -103,7 +100,6 @@
 }
 
 .dangerButton {
-  /* Genbruger styling fra .actionButton, men med andre farver */
   display: inline-block;
   text-decoration: none;
   border: none;
